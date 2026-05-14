@@ -10,7 +10,7 @@ Click the toolbar button (or hit ⌘⇧D / Ctrl+Shift+D), and the extension open
 a new tab at:
 
 ```
-https://slate-c4x.pages.dev/bookmarks/new?url=<tab url>&title=<tab title>
+https://slate.pintobean.xyz/bookmarks/new?url=<tab url>&title=<tab title>
 ```
 
 Slate creates the bookmark in local storage, redirects to the edit view, and
