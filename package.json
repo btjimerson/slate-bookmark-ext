@@ -1,0 +1,22 @@
+{
+	"name": "slate-bookmark-ext",
+	"version": "0.3.0",
+	"description": "Save the current tab to Slate as a bookmark, or clip the article as a markdown note.",
+	"private": true,
+	"scripts": {
+		"vendor": "cp node_modules/@mozilla/readability/Readability.js vendor/Readability.js && cp node_modules/turndown/dist/turndown.js vendor/turndown.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/btjimerson/slate-bookmark-ext.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/btjimerson/slate-bookmark-ext/issues"
+	},
+	"homepage": "https://github.com/btjimerson/slate-bookmark-ext#readme",
+	"dependencies": {
+		"@mozilla/readability": "^0.6.0",
+		"turndown": "^7.2.4"
+	}
+}

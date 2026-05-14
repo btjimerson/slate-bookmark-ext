@@ -1,21 +1,39 @@
 # Slate Bookmarks (Chrome extension)
 
-One-click "save this tab" for [Slate](https://github.com/btjimerson/slate).
-Pairs with the Slate-side `/bookmarks/new` route — also used by the PWA Web
-Share Target on mobile (see slate#34).
+Save the current tab to [Slate](https://github.com/btjimerson/slate) — as a
+bookmark, or clip the article as a note. No PAT lives in the extension; auth
+stays in Slate.
 
-## How it works
+## Two flows
 
-Click the toolbar button (or hit ⌘⇧D / Ctrl+Shift+D), and the extension opens
-a new tab at:
+### Bookmark — save the URL
+
+Toolbar button or **⌘⇧D / Ctrl+Shift+D**. Opens:
 
 ```
 <slate origin>/bookmarks/new?url=<tab url>&title=<tab title>
 ```
 
-Slate creates the bookmark in local storage, redirects to the edit view, and
-syncs to GitHub on the next push. No PAT lives in the extension; auth stays in
-Slate.
+Slate's `/bookmarks/new` creates the row and drops you in the edit view to
+add tags / pick a folder. (Same route the PWA Web Share Target uses on
+mobile.)
+
+### Clip — save the article as a note
+
+**⌘⇧S / Ctrl+Shift+S** or right-click the page → **Clip page to Slate**.
+The extension extracts the article body with
+[Mozilla Readability](https://github.com/mozilla/readability), converts to
+markdown with [Turndown](https://github.com/mixmark-io/turndown), and opens:
+
+```
+<slate origin>/clip#<base64-encoded JSON payload>
+```
+
+Slate's `/clip` route decodes the payload, creates a note titled like the
+article with a small source/byline/date header, and drops you in the editor.
+If you have text selected when you trigger the clip, only that selection is
+captured. If Readability can't find an article (homepages, dashboards), it
+falls back to `<article>` / `<main>` / `<body>`.
 
 ## Configuring the Slate origin
 
