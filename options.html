@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Slate Bookmarks — Options</title>
+		<style>
+			body {
+				font-family:
+					-apple-system,
+					BlinkMacSystemFont,
+					'Segoe UI',
+					sans-serif;
+				margin: 0;
+				padding: 16px;
+				min-width: 360px;
+				color: #1e293b;
+				background: #fff;
+			}
+			@media (prefers-color-scheme: dark) {
+				body {
+					color: #e2e8f0;
+					background: #0f172a;
+				}
+				input {
+					background: #1e293b;
+					color: #e2e8f0;
+					border-color: #334155;
+				}
+			}
+			h1 {
+				font-size: 14px;
+				font-weight: 600;
+				margin: 0 0 12px;
+				color: inherit;
+			}
+			label {
+				display: block;
+				font-size: 12px;
+				color: #64748b;
+				margin-bottom: 4px;
+			}
+			input[type='url'] {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 6px 8px;
+				font-size: 13px;
+				border: 1px solid #cbd5e1;
+				border-radius: 4px;
+				font-family: inherit;
+			}
+			input[type='url']:focus {
+				outline: none;
+				border-color: #2563eb;
+			}
+			.help {
+				font-size: 11px;
+				color: #94a3b8;
+				margin-top: 4px;
+			}
+			.actions {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin-top: 12px;
+			}
+			button {
+				background: #1e293b;
+				color: #fff;
+				border: 0;
+				border-radius: 4px;
+				padding: 6px 12px;
+				font-size: 12px;
+				font-weight: 500;
+				cursor: pointer;
+				font-family: inherit;
+			}
+			button:hover {
+				background: #334155;
+			}
+			.status {
+				font-size: 11px;
+				color: #64748b;
+				min-height: 14px;
+			}
+			.status.ok {
+				color: #16a34a;
+			}
+			.status.err {
+				color: #dc2626;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Slate origin</h1>
+		<label for="origin">URL where your Slate is hosted</label>
+		<input
+			id="origin"
+			type="url"
+			placeholder="https://slate.pintobean.xyz"
+			autocomplete="off"
+			required
+		/>
+		<div class="help">
+			Bookmarks land at <code>&lt;origin&gt;/bookmarks/new</code>. Default is the hosted instance at
+			<code>slate.pintobean.xyz</code>.
+		</div>
+		<div class="actions">
+			<button id="save" type="button">Save</button>
+			<span class="status" id="status"></span>
+		</div>
+		<script src="options.js"></script>
+	</body>
+</html>

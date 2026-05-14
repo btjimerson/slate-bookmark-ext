@@ -10,12 +10,24 @@ Click the toolbar button (or hit ⌘⇧D / Ctrl+Shift+D), and the extension open
 a new tab at:
 
 ```
-https://slate.pintobean.xyz/bookmarks/new?url=<tab url>&title=<tab title>
+<slate origin>/bookmarks/new?url=<tab url>&title=<tab title>
 ```
 
 Slate creates the bookmark in local storage, redirects to the edit view, and
 syncs to GitHub on the next push. No PAT lives in the extension; auth stays in
 Slate.
+
+## Configuring the Slate origin
+
+Defaults to `https://slate.pintobean.xyz`. To point at your own deployment:
+
+1. Right-click the toolbar icon → **Options** (or chrome://extensions → Slate
+   Bookmarks → Details → Extension options).
+2. Enter your Slate URL (e.g. `https://slate.example.com`).
+3. Save.
+
+The setting lives in `chrome.storage.sync`, so it follows your Google account
+across machines.
 
 ## Install (developer mode, no review needed)
 
