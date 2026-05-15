@@ -18,5 +18,8 @@
 	"dependencies": {
 		"@mozilla/readability": "^0.6.0",
 		"turndown": "^7.2.4"
+	},
+	"devDependencies": {
+		"sharp": "^0.34.5"
 	}
 }

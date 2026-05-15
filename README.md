@@ -60,22 +60,17 @@ page contents — `activeTab` only grants access to the URL and title.
 
 ## Icons
 
-This repo ships without icon PNGs to keep the diff small. Drop the following
-files in `icons/` before loading:
+PNGs at the three Chrome-required sizes (16, 48, 128) are checked in under
+`icons/`. The design lives as an SVG in `scripts/make-icons.mjs` and mirrors
+the Slate PWA's tile icon — three offset bars on a Frost-blue rounded
+square with an Aurora-green accent on the middle bar.
 
-- `icons/icon-16.png` (16×16)
-- `icons/icon-48.png` (48×48)
-- `icons/icon-128.png` (128×128)
-
-A quick way to generate them from `slate/static/icon-512.png`:
+To regenerate after a design change:
 
 ```bash
-sips -Z 16  icon-512.png --out icon-16.png
-sips -Z 48  icon-512.png --out icon-48.png
-sips -Z 128 icon-512.png --out icon-128.png
+npm install
+node scripts/make-icons.mjs
 ```
-
-(Or use `sharp`, `convert`, etc.)
 
 ## License
 
