@@ -5,7 +5,8 @@
 	"private": true,
 	"scripts": {
 		"vendor": "cp node_modules/@mozilla/readability/Readability.js vendor/Readability.js && cp node_modules/turndown/dist/turndown.js vendor/turndown.js",
-		"package": "node scripts/package.mjs"
+		"package": "node scripts/package.mjs",
+		"screenshot": "node scripts/make-screenshot.mjs"
 	},
 	"repository": {
 		"type": "git",

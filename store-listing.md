@@ -67,6 +67,7 @@ route. Nothing is stored or sent except that hand-off.
 ## Listing assets checklist (manual)
 
 - [x] 128×128 store icon — `icons/icon-128.png`
-- [ ] At least one 1280×800 (or 640×400) screenshot — toolbar button on a real page
+- [ ] At least one 1280×800 screenshot — capture the extension in action, then
+      `npm run screenshot -- <capture>.png` to size it exactly (→ `dist/screenshot-1280x800.png`)
 - [ ] Optional: 440×280 small promo tile, 1400×560 marquee tile
 - [ ] Publish the privacy page at https://slate.pintobean.xyz/privacy (Slate repo)

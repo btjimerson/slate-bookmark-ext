@@ -54,8 +54,15 @@ across machines.
 One-click install with auto-updates. _Listing pending review — see
 [btjimerson/slate#36](https://github.com/btjimerson/slate/issues/36)._
 
-<!-- TODO: once published, replace the line above with:
-     [**Install Slate Bookmarks**](https://chromewebstore.google.com/detail/<extension-id>) — one-click install with auto-updates. -->
+<!-- FLIP-WHEN-PUBLISHED: once the item exists in the dev console (the ID is
+     assigned to the draft, before review), replace the line above with the
+     next line and run with the real 32-char ID:
+
+     [**Install Slate Bookmarks**](https://chromewebstore.google.com/detail/EXTENSION_ID) — one-click install with auto-updates.
+
+     Quick flip:
+       sed -i '' 's#EXTENSION_ID#<your-id>#' README.md   # then swap the two lines
+-->
 
 Edge users can install the same listing directly from Chrome's store.
 
