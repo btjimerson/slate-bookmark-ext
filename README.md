@@ -47,7 +47,19 @@ Defaults to `https://slate.pintobean.xyz`. To point at your own deployment:
 The setting lives in `chrome.storage.sync`, so it follows your Google account
 across machines.
 
-## Install (developer mode, no review needed)
+## Install
+
+### From the Chrome Web Store
+
+One-click install with auto-updates. _Listing pending review — see
+[btjimerson/slate#36](https://github.com/btjimerson/slate/issues/36)._
+
+<!-- TODO: once published, replace the line above with:
+     [**Install Slate Bookmarks**](https://chromewebstore.google.com/detail/<extension-id>) — one-click install with auto-updates. -->
+
+Edge users can install the same listing directly from Chrome's store.
+
+### Developer mode (no review needed)
 
 1. Clone this repo.
 2. In Chrome, open `chrome://extensions`.
@@ -57,6 +69,18 @@ across machines.
 
 The extension stays installed across browser restarts. It does **not** read
 page contents — `activeTab` only grants access to the URL and title.
+
+## Packaging for the Chrome Web Store
+
+```bash
+npm run package
+```
+
+Builds `dist/slate-bookmark-ext-<version>.zip` containing only the runtime
+files (no README, dev scripts, lockfile, or icon source) with `manifest.json`
+at the archive root — ready to upload in the
+[developer console](https://chrome.google.com/webstore/devconsole). Bump
+`version` in `manifest.json` before packaging a new release.
 
 ## Icons
 

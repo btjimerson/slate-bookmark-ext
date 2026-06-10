@@ -4,7 +4,8 @@
 	"description": "Save the current tab to Slate as a bookmark, or clip the article as a markdown note.",
 	"private": true,
 	"scripts": {
-		"vendor": "cp node_modules/@mozilla/readability/Readability.js vendor/Readability.js && cp node_modules/turndown/dist/turndown.js vendor/turndown.js"
+		"vendor": "cp node_modules/@mozilla/readability/Readability.js vendor/Readability.js && cp node_modules/turndown/dist/turndown.js vendor/turndown.js",
+		"package": "node scripts/package.mjs"
 	},
 	"repository": {
 		"type": "git",
